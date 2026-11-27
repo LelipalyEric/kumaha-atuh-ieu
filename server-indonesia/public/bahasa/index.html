@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preferensi Bahasa - Kelompok E</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+    }
+
+    nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+    nav h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      color: silver;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      display: block;
+      width: 220px;
+      padding: 1rem;
+      border: 1px solid #444;
+      background-color: #111;
+      cursor: pointer;
+    }
+
+    .flag {
+      display: block;
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.75rem 2rem;
+      color: black;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>BAHASA</h1>
+    <ul>
+      <li><a href="../home/index.html">Beranda</a></li>
+      <li><a href="../about/index.html">Tentang Kami</a></li>
+      <li><a href="../bahasa/index.html">Preferensi Bahasa</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Pilih Preferensi Bahasa</h1>
+
+    <form action="/set-language" method="POST">
+      <div class="cards">
+        <label class="card">
+          <img class="flag" src="../assets/Indonesia_Flag.webp" alt="Bendera Indonesia">
+          <input type="radio" name="bahasa" value="indonesia" checked> Bahasa Indonesia
+        </label>
+
+        <label class="card">
+          <img class="flag" src="../assets/Sunda_Flag.webp" alt="Bendera Sunda">
+          <input type="radio" name="bahasa" value="sunda"> Basa Sunda
+        </label>
+      </div>
+
+      <button type="submit">Simpan Preferensi</button>
+    </form>
+  </main>
+</body>
+</html>
